@@ -1,0 +1,412 @@
+/*Written By Md. Tanvir Ahamed Siddike*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+/*=== Base Style ===*/
+@font-face {
+	font-family: Roboto;
+	src: url('../fonts/Roboto-Regular.woff') format('woff'),
+		 url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: Roboto-Light;
+	src: url('../fonts/Roboto-Light.woff') format('woff'),
+		 url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+@font-face {
+	font-family: ProximaNova;
+	src: url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		 url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: ProximaNova-Light;
+	src: url('../fonts/ProximaNova-Light.woff') format('woff'),
+		 url('../fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+body {
+	font-family: Roboto;
+	font-size: 16px;
+}
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+	height: 100%;
+}
+/*=== Header Style ===*/
+.page-header , .page-footer {
+	background: #f7c61d;
+	color: #000;
+	height: 67px;
+
+}
+.page-header .wrapper , .page-footer .wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+.page-header nav a {
+	text-decoration: none;
+	color: #000;
+	padding: 0 35px;
+	text-transform: uppercase;
+	font-family: ProximaNova;
+}
+.page-header nav a:hover , .page-footer nav a:hover {
+	color: #fff;
+}
+/*=== Main Style ===*/
+.main>.wrapper {
+	display: flex;
+}
+main {
+	width: 77%;
+}
+main h2 {
+    font-family: ProximaNova;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 45px 0px 18px 0px;
+}
+article {
+	display: flex;
+	margin-bottom: 60px;
+}
+.article-left {
+    width: 30%;
+}
+.article-right {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 25px;
+}
+.article-left {
+	position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.article-left img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+.article-left img:hover {
+	transform: scale(1.1);
+}
+.article-right h3 {
+    font-family: ProximaNova-Light;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333333;
+}
+.article-right h3:hover {
+	color: #f7c61d;
+	cursor: pointer;
+}
+.meta {
+	font-family: Roboto-Light;
+	font-weight: 300;
+	font-size: 13px;
+}
+.meta span::after {
+	content: '|';
+	font-size: 13px;
+	margin: 0px 8px;
+}
+.meta span:last-child::after {
+	display: none;
+}
+.date {
+	color: #999999;
+}
+.author {
+	color: #999999;
+}
+.category {
+	color: #e3b002;
+}
+.description {
+	font-family: Roboto;
+	font-size: 16px;
+	color: #555555;
+}
+.description::after {
+	content: '>';
+	font-size: 16px;
+	color: #e3b002;
+}
+.additional {
+	font-size: 13px;
+	color: #999999;
+}
+.views {
+}
+.views::before , .comments::before {
+	content: '\f06e';
+	font-family: "Font Awesome 5 Free";
+	font-size: 13px;
+	margin-right: 8px;
+	color: #999999;
+}
+.views::after {
+	content: '|';
+	font-size: 13px;
+	margin: 0 8px;
+}
+.comments::before {
+	content: '\f075';
+}
+.comments {
+	color: #e3b002;
+}
+.more {
+	font-family: Roboto;
+	font-size: 12px;
+	color: #000000;
+	background: transparent;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid #e3b002;
+	border-radius: 5px;
+	width: 170px;
+	height: 40px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	outline: none;
+	cursor: pointer;
+}
+.more:hover {
+	background: #e3b002;
+	color: #fff;
+}
+/*=== Aside Style ===*/
+.right-sidebar {
+	width: 25%;
+	padding-left: 58px;
+}
+.search-box {
+    padding-top: 88px;
+    position: relative;
+    width: 100%;
+}
+.search-box label {
+    position: absolute;
+    left: 12px;
+    z-index: 100;
+    bottom: 8px;
+    font-size: 14px;
+}
+.search-box label:hover {
+   color: #e3b002;
+   cursor: pointer;
+}
+.search-box input {
+    height: 30px;
+    padding-left: 30px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #000;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.claendar-widget {
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 38px;
+}
+.calendar-top {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+}
+.calendar-month {
+	font-family: ProximaNova;
+	font-size: 16px;
+	color: #000;
+}
+.calendar-prev,.calendar-next {
+	color: #a0a0a0;
+}
+.calendar-body table {
+    width: calc(100% + 1px);
+    box-sizing: border-box;
+}
+.calendar-body table tr th {
+    height: 28px;
+    border-right: 1px solid #fff;
+    background: #e7e7e7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #888888;
+    font-family: Roboto;
+    font-size: 10.67px;
+}
+.calendar-body table tr th:last-child {
+	border-right: none;
+}
+.calendar-body table tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.calendar-body table td {
+    height: 33px;
+    border: 1px solid #e5e5e5;
+    color: #e5e5e5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.current-month {
+    color: #4d4d4d!important;
+}
+.current-day {
+	background-color: #f7c61d;
+	color: #fff;
+}
+.current-day:hover {
+	color: #999999!important;
+}
+.popular-news {
+	margin-top: 45px;
+}
+.popular-news h2 {
+    font-family: ProximaNova;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.popular-news h2::after {
+    content: '.';
+    font-size: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    margin-left: 10px;
+}
+.popular-news article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.popular-news article h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000;
+    font-family: ProximaNovaLight;
+    font-weight: 300;
+}
+.popular-news article h3:hover {
+    color: #e3b002;
+    cursor: pointer;
+}
+/*=== Footer Style ===*/
+.page-footer>.wrapper>* {
+	width: 33.33%;
+}
+.copy {
+	color: #a78613;
+	font-family: ProximaNova;
+	font-weight: 300;
+	font-size: 13px;
+}
+.page-footer nav a {
+	font-size: 14px;
+	font-family: Roboto;
+	color: #000;
+	text-decoration: none;
+}
+.social {
+    display: flex;
+    justify-content: flex-end;
+}
+.social a {
+    color: #f8cc33;
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 13px;
+}
+.social a:hover {
+	color: #fff;
+	background: #f8cc33;
+}
